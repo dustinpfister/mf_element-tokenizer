@@ -6,8 +6,7 @@ var Tokenizer = function(opt){
     // or fall back to body if nothing is given via opt.el
     opt.el = opt.el == undefined ? (function(){
         var art = document.getElementsByTagName('article');
-        console.log(art.length === 0 ? document.body: art[0]);
-        return !art ? document.body : art[0];
+        return art.length === 0 ? document.body: art[0]
     }()) : opt.el;
     
     console.log(opt);
