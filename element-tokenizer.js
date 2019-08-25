@@ -2,12 +2,12 @@ var Tokenizer = function(opt){
     
     opt = opt || {};
     
+    // Root Element: by default use the first article element, 
+    // or fall back to body if nothing is given via opt.el
     opt.el = opt.el == undefined ? (function(){
-       
-        var el = document.body;
-        
-        return el;
-        
+        var art = document.getElementsByTagName('article');
+        console.log(art.length === 0 ? document.body: art[0]);
+        return !art ? document.body : art[0];
     }()) : opt.el;
     
     console.log(opt);
