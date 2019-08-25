@@ -1,6 +1,8 @@
 # mf_element_tokenizer
 
-Tokenize the text content of an element into an array of words.
+Tokenize the text content of a page into an array of words.
+
+The basic idea here is that I just wanted a script that will create an array or words based on the readable content of a page. This array will then be used elseware to create something based on the content of a page.
 
 ## Basic use
 
